@@ -1,0 +1,31 @@
+{
+    "name": "web-server-node",
+    "version": "1.0.0",
+    "description": "Aplicación con el propósito de mostrar como crear un web server con NodeJS",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo Error: no test specified && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bitcubico/web-server-node.git"
+    },
+    "keywords": [
+        "web",
+        "server",
+        "web server",
+        "NodeJS",
+        "bitcubico",
+        "mcubico",
+        "javascript",
+        "http",
+        "css",
+        "bootstrap"
+    ],
+    "author": "Bitcubico Technology S.A.S. - Mauricio Montoya Medrano",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bitcubico/web-server-node/issues"
+    },
+    "homepage": "https://github.com/bitcubico/web-server-node#readme"
+}
