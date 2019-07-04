@@ -20,8 +20,11 @@ Aplicación con el propósito de mostrar como crear un web server con NodeJS
 ## Paquetes Usados
 
 * [express](http://bit.ly/2LCToHk)
+* [hbs](http://bit.ly/2XTU9m4)
 
 ## Links
+
+* [Handlebars](http://bit.ly/2JsKY2n)
 
 ## Notas
 

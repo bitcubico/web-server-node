@@ -1,3 +1,5 @@
+// Con express podemos especificar las url que vamos a aceptar
+// con http escuchabamos todo sin filtro
 const express = require('express');
 const http = express();
 const port = 3000;
@@ -6,28 +8,31 @@ const port = 3000;
 // podría accederlos.
 http.use(express.static(`${__dirname}/public`))
 
-// Con express podemos especificar las url que vamos a aceptar
-// con http escuchabamos todo sin filtro
+// Indico con esta línea que vamos a usar Handlebars para construir las respuestas al cliente
+// y que los archivos Handlebars tendrán la extensión .hbs
+http.set('view engine', 'hbs');
 
 // Esta es la url del home (localhost:port/)
 http.get('/', (req, res) => {
-    res.send('Hello World');
+    res.render('home.hbs', {
+        usuario: "mauricio montoya medrano",
+        annio: new Date().getFullYear()
+    });
 });
 
 // Esta es la url del home (localhost:port/home)
 http.get('/home', (req, res) => {
-    res.send('Hello World from Home');
+    res.render('home.hbs', {
+        usuario: "mauricio montoya medrano",
+        annio: new Date().getFullYear()
+    });
 });
 
 // Esta url me retorna un Json (localhost:port/get/json)
-http.get('/get/json', (req, res) => {
-    let data = {
-        Nombres: 'Mauricio',
-        Apellidos: 'Montoya Medrano',
-        Email: 'mcubico33@gmail.com',
-    }
-
-    res.send(data);
+http.get('/about', (req, res) => {
+    res.render('about.hbs', {
+        annio: new Date().getFullYear()
+    });
 });
 
 http.listen(port, () => {
