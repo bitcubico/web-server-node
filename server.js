@@ -2,6 +2,10 @@ const express = require('express');
 const http = express();
 const port = 3000;
 
+// Con este MIDDLEWARE le indicamos al servidor que el directorio especificado es público, por lo tanto cualquiera
+// podría accederlos.
+http.use(express.static(`${__dirname}/public`))
+
 // Con express podemos especificar las url que vamos a aceptar
 // con http escuchabamos todo sin filtro
 
