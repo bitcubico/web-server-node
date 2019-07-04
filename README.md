@@ -9,9 +9,7 @@ Aplicación con el propósito de mostrar como crear un web server con NodeJS
 
 ## Ejemplo
 
-```
-none server
-```
+* `node server`
 
 ## Librerías de NodeJS usadas
 
