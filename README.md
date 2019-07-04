@@ -13,9 +13,9 @@ Aplicación con el propósito de mostrar como crear un web server con NodeJS
 
 ## Librerías de NodeJS usadas
 
-* [Http](http://bit.ly/2Nye462)
-
 ## Paquetes Usados
+
+* [express](http://bit.ly/2LCToHk)
 
 ## Links
 

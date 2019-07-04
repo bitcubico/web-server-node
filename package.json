@@ -27,5 +27,8 @@
     "bugs": {
         "url": "https://github.com/bitcubico/web-server-node/issues"
     },
-    "homepage": "https://github.com/bitcubico/web-server-node#readme"
+    "homepage": "https://github.com/bitcubico/web-server-node#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
