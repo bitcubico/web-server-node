@@ -2,6 +2,7 @@
 // con http escuchabamos todo sin filtro
 const express = require('express');
 const hbs = require('hbs');
+require('./helpers/helpers');
 
 const http = express();
 const port = 3000;
@@ -10,32 +11,29 @@ const port = 3000;
 // podría accederlos.
 http.use(express.static(`${__dirname}/public`))
 
-hbs.registerPartials(`${__dirname}/views/partials`)
-    // Indico con esta línea que vamos a usar Handlebars para construir las respuestas al cliente
-    // y que los archivos Handlebars tendrán la extensión .hbs
+hbs.registerPartials(`${__dirname}/views/partials`);
+
+// Indico con esta línea que vamos a usar Handlebars para construir las respuestas al cliente
+// y que los archivos Handlebars tendrán la extensión .hbs
 http.set('view engine', 'hbs');
 
 // Esta es la url del home (localhost:port/)
 http.get('/', (req, res) => {
     res.render('home.hbs', {
-        usuario: "mauricio montoya medrano",
-        annio: new Date().getFullYear()
+        usuario: "mauricio montoya medrano"
     });
 });
 
 // Esta es la url del home (localhost:port/home)
 http.get('/home', (req, res) => {
     res.render('home.hbs', {
-        usuario: "mauricio montoya medrano",
-        annio: new Date().getFullYear()
+        usuario: "mauricio montoya medrano"
     });
 });
 
 // Esta url me retorna un Json (localhost:port/get/json)
 http.get('/about', (req, res) => {
-    res.render('about.hbs', {
-        annio: new Date().getFullYear()
-    });
+    res.render('about.hbs');
 });
 
 http.listen(port, () => {
