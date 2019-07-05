@@ -12,8 +12,7 @@ Aplicación con el propósito de mostrar como crear un web server con NodeJS
 * `node server`
 * `localhost:3000/`
 * `localhost:3000/home`
-* `localhost:3000/get/json`
-* `localhost:3000/home.html`
+* `localhost:3000/about`
 
 ## Librerías de NodeJS usadas
 

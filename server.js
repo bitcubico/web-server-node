@@ -1,6 +1,8 @@
 // Con express podemos especificar las url que vamos a aceptar
 // con http escuchabamos todo sin filtro
 const express = require('express');
+const hbs = require('hbs');
+
 const http = express();
 const port = 3000;
 
@@ -8,8 +10,9 @@ const port = 3000;
 // podría accederlos.
 http.use(express.static(`${__dirname}/public`))
 
-// Indico con esta línea que vamos a usar Handlebars para construir las respuestas al cliente
-// y que los archivos Handlebars tendrán la extensión .hbs
+hbs.registerPartials(`${__dirname}/views/partials`)
+    // Indico con esta línea que vamos a usar Handlebars para construir las respuestas al cliente
+    // y que los archivos Handlebars tendrán la extensión .hbs
 http.set('view engine', 'hbs');
 
 // Esta es la url del home (localhost:port/)
